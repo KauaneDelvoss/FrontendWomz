@@ -58,7 +58,7 @@ export default {
   ],
 
   axios: {
-    baseURL: 'http://kauanedelvossribas.pythonanywhere.com/'
+    baseURL: 'https://kauanedelvossribas.pythonanywhere.com/'
   },
 
   styleResources: {
