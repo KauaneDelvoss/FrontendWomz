@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Encode+Sans&family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+.h1 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 12vh;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #E8E5AE;
+}
+
+.h3 {
+  font-family: "Encode Sans";
+  font-size: 3vh;
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 3vh;
+  color: #E8E5AE;
+}
+
+.bookshelf-name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.titulo {
+  font-family: "Libre Baskerville", serif;
+  font-size: 5vh;
+  color: #E8E5AE;
+}
+
+.subtitulo-minimo {
+  font-size: 1.6vh;
+  color: #E8E5AE;
+  text-decoration: underline;
+}
+.subtitulo-minimo:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header-title {
+  color: #E8E5AE;
+  font-family: "Encode Sans", serif;
+  font-size: 0.8vw;
+}
+
+.subtitulo {
+  font-family: "Encode Sans", sans-serif;
+  font-size: 2vh;
+  color: #E8E5AE;
+}
+
+.reading-text {
+  font-size: 0.9rem;
+}
+
+.col-default {
+  columns: 6;
+}
+
+.v-icon-item {
+  color: #E8E5AE !important;
+}
+
+.btnWormz {
+  background: #E8E5AE;
+  border-radius: 20px;
+  padding: 0.6vh 1.4vh;
+  color: black;
+  font-size: 1.5vh;
+  font-family: "Encode Sans", sans-serif;
+}
+.btnWormz:hover {
+  background: transparent;
+  border: 1px solid #E8E5AE;
+  color: #E8E5AE;
+  transition: 0.5s;
+}
+
+.app {
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+.divider {
+  border-color: #E8E5AE !important;
+}
+
+.margin-left-page {
+  margin-left: 6.15vw;
+}
+
+.margin-right-page {
+  margin-right: 6.15vw;
+}
+
+/*# sourceMappingURL=style.css.map */

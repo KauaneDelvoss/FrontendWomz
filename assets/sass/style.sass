@@ -1,0 +1,90 @@
+@use 'variables'
+@use 'mixins'
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&family=Encode+Sans&family=Libre+Baskerville&display=swap")
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap')
+
+// Configurações de Texto
+.h1
+    font-family: "Libre Baskerville", serif
+    font-size: 12vh
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    color: variables.$primary-color
+
+.h3
+    // font-family: "Libre Baskerville", serif
+    font-family: 'Encode Sans'
+    font-size: 3vh
+    font-weight: 400
+    line-height: 30px
+    font-size: 3vh
+    color: variables.$primary-color
+
+.bookshelf-name:hover
+    text-decoration: underline
+    cursor: pointer
+
+.titulo
+    font-family: "Libre Baskerville", serif
+    font-size: 5vh
+    color: variables.$primary-color
+
+.subtitulo-minimo
+    font-size: 1.6vh
+    color: variables.$primary-color
+    text-decoration: underline
+
+    &:hover
+        font-weight: bold
+        cursor: pointer
+
+.header-title
+    color: variables.$primary-color
+    font-family: "Encode Sans", serif
+    font-size: 0.8vw
+
+
+.subtitulo
+    font-family: "Encode Sans", sans-serif
+    font-size: 2vh
+    color: variables.$primary-color
+
+.reading-text 
+  font-size: 0.9rem
+
+
+.col-default
+    columns: 6
+
+.v-icon-item
+    color: variables.$primary-color  !important
+
+.btnWormz
+  background: variables.$primary-color
+  border-radius: 20px
+  padding: 0.6vh 1.4vh
+  color: black
+  font-size: 1.5vh
+  font-family: "Encode Sans", sans-serif
+
+  &:hover
+    background: transparent
+    border: 1px solid variables.$primary-color
+    color: variables.$primary-color
+    transition: 00.5s
+
+
+// Configurações de margem
+.app
+    @include mixins.container
+
+.divider
+  border-color: variables.$primary-color !important
+
+
+.margin-left-page
+    margin-left: variables.$distance-margin
+
+.margin-right-page
+    margin-right: variables.$distance-margin
+
+
