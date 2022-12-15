@@ -1,5 +1,5 @@
 <template>
-  <div class="add-book">
+  <div class="add-book my-10">
     <div class="h3 mt-10 margin-left-page">Adicionar livro</div>
     <div class="form margin-left-page margin-right-page mt-10">
       <v-text-field
