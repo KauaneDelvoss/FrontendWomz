@@ -28,7 +28,7 @@
             CANCELAR
           </v-btn>
           <v-spacer></v-spacer>
-          <v-btn class="button" text @click="($emit('addAuthor'), addAuthor(), author={})">
+          <v-btn class="button" text @click="(addAuthor(), author={})">
             ADICIONAR
           </v-btn>
         </v-card-actions>
@@ -49,7 +49,9 @@ export default {
   methods:{
     addAuthor(){
         this.$axios.post("post/addAuthor", JSON.stringify(this.author)).then(response =>
-        console.log(response))
+        console.log(response),
+        $emit('addAuthor')
+        )
     }
   }
 };

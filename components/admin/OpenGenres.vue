@@ -28,7 +28,7 @@
             CANCELAR
           </v-btn>
           <v-spacer></v-spacer>
-          <v-btn class="button" text @click="($emit('addGenre'), addGenre(), genre={})">
+          <v-btn class="button" text @click="(addGenre(), genre={})">
             ADICIONAR
           </v-btn>
         </v-card-actions>
@@ -49,7 +49,9 @@ export default {
   methods:{
     addGenre(){
         this.$axios.post("post/addGenre", JSON.stringify(this.genre)).then(response =>
-        console.log(response))
+        console.log(response),
+        $emit('addAuthor')
+        )
     }
   }
 };

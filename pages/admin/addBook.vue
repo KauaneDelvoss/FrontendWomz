@@ -65,7 +65,9 @@
           color="#E8E5AE"
           dark
         ></v-autocomplete>
-        <v-icon class="v-icon-item ms-5" @click="openAuthors = true">mdi-plus</v-icon>
+        <v-icon class="v-icon-item ms-5" @click="openAuthors = true"
+          >mdi-plus</v-icon
+        >
       </div>
       <div class="d-flex flex-row align-center" style="max-width: 50%">
         <v-autocomplete
@@ -82,7 +84,9 @@
           color="#E8E5AE"
           dark
         ></v-autocomplete>
-        <v-icon class="v-icon-item ms-5" @click="openGenres = true">mdi-plus</v-icon>
+        <v-icon class="v-icon-item ms-5" @click="openGenres = true"
+          >mdi-plus</v-icon
+        >
       </div>
     </div>
     <button
@@ -93,14 +97,22 @@
       ADICIONAR LIVRO
     </button>
 
-    <OpenAuthors @closeDialog="openAuthors = false" @addAuthor="getAuthors(), openAuthors=false" :dialog="openAuthors"/>
-    <OpenGenres @closeDialog="openGenres = false" @addAuthor="getGenres(), openGenres=false" :dialog="openGenres"/>
+    <OpenAuthors
+      @closeDialog="openAuthors = false"
+      @addAuthor="getAuthors(), (openAuthors = false)"
+      :dialog="openAuthors"
+    />
+    <OpenGenres
+      @closeDialog="openGenres = false"
+      @addGenre="getGenres(), (openGenres = false)"
+      :dialog="openGenres"
+    />
   </div>
 </template>
 
 <script>
-import OpenGenres from "~/components/admin/OpenGenres"
-import OpenAuthors from "~/components/admin/OpenAuthors"
+import OpenGenres from "~/components/admin/OpenGenres";
+import OpenAuthors from "~/components/admin/OpenAuthors";
 
 export default {
   middleware: "admin",
@@ -113,7 +125,7 @@ export default {
       genres: {},
       capa: "",
       openAuthors: false,
-      openGenres: false
+      openGenres: false,
     };
   },
   mounted() {
@@ -146,6 +158,8 @@ export default {
         .then((response) => {
           console.log(response);
         });
+
+      this.book = {};
     },
   },
 };
