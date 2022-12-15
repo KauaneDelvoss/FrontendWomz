@@ -12,6 +12,7 @@
 <script>
 
 export default {
+  middleware: 'admin',
   layout: "admin",
 };
 </script>

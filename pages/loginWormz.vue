@@ -86,17 +86,26 @@ export default {
     },
     async submitLogin() {
       try {
-        await this.LOGIN(this.user);
+        const user = await this.LOGIN(this.user);
 
         this.loginMessage = true;
         this.loginText = "Login realizado com sucesso";
         this.loginColor = "sucess";
 
-        setTimeout(() => {
-          this.$router.push({
-            path: "/SearchBib",
-          });
-        }, 1000);
+        if (user.staff == false){
+          setTimeout(() => {
+            this.$router.push({
+              path: "/SearchBib",
+            });
+          }, 1000);
+        } else {
+          setTimeout(() => {
+            this.$router.push({
+              path: "/admin",
+            });
+          }, 1000);
+        }
+        
       } catch (e) {
         this.loginMessage = true;
         this.loginText = "Falha na autenticação";

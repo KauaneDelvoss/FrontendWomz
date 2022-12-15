@@ -50,9 +50,10 @@ export const actions = {
             user.first_name = userResponse.first_name
             user.last_name = userResponse.last_name
             user.user_biography = userResponse.user_biography
+            user.staff = userResponse.staff
 
             commit('SET_LOGIN_INFO', user)
-            return Promise.resolve(userInfo)
+            return userResponse
         } catch(e) {
             dispatch('LOGOUT')
             return Promise.reject(e)

@@ -4,7 +4,7 @@
       <div class="sidebar d-flex flex-column justify-center">
 
         <div class="box-item d-flex align-center">
-          <div class="header-title item-title">Olá admin!</div>
+          <div class="header-title item-title">Olá, {{ user.username }}!</div>
         </div>
         <v-divider class="divider-item" />
         <div class="box-item d-flex align-center pointer" @click="goTo('/addBook')">
@@ -21,6 +21,10 @@
           <v-icon class="icon">mdi-notebook</v-icon>
           <div class="header-title item-title">Questões</div>
         </div>
+        <v-divider class="divider-item" />
+        <div class="box-item d-flex align-center pointer" @click="logOut()">
+          <div class="header-title item-title">LOGOUT</div>
+        </div>
 
       </div>
 
@@ -34,17 +38,28 @@
 </template>
 
 <script>
-
+import { mapState, mapActions } from 'vuex'
 export default {
   data() {
-    return {};
+    return {
+    };
   },
   methods: {
+    ...mapActions('auth', ['LOGOUT']),
     goTo(path) {
       this.$router.push({
         path: 'admin' + path
       })
+    },
+    logOut(){
+      this.LOGOUT()
+        this.$router.push({
+          path: '/loginWormz'
+        })
     }
+  },
+  computed: {
+    ...mapState('auth', ['user'])
   }
 };
 </script>
