@@ -17,7 +17,16 @@
         </div>
       </div>
     </div>
+  
     <div class="icon-wrapper d-flex flex-row align-center justify-center margin-right-page hide-mobile-l">
+      <div class="list-wrapper d-flex flex-grow-1 flex-row margin-left-page align-center hide-mobile-l">
+      <div class="d-flex list-for mr-7">
+            <div v-show="user.staff" @click="transitionMaker('/admin')" class="header-title list-item">
+                ADMIN
+            </div>
+      </div>
+    </div>
+      
       <div class="dropdown">
         <div v-if="user.username" class="header-title list-item perfil" @click="show = !show">
           <span>
@@ -41,6 +50,7 @@
 
         
       </div>
+      
     </div>
 
     <v-divider class="divider-item" />

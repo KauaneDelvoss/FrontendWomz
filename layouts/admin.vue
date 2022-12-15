@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <div class="admin-layout">
+      <NavigationDrawer />
       <div class="sidebar d-flex flex-column justify-center">
 
         <div class="box-item d-flex align-center">
