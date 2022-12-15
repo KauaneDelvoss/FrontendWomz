@@ -11,11 +11,11 @@
           <v-icon class="icon">mdi-bookshelf</v-icon>
           <div class="header-title item-title">Livros</div>
         </div>
-        <v-divider class="divider-item" />
+        <!-- <v-divider class="divider-item" />
         <div class="box-item d-flex align-center pointer" @click="goTo('/addAuthor')">
           <v-icon class="icon">mdi-account-cowboy-hat</v-icon>
           <div class="header-title item-title">Autores</div>
-        </div>
+        </div> -->
         <v-divider class="divider-item" />
         <div class="box-item d-flex align-center pointer" @click="goTo('/addQuestion')">
           <v-icon class="icon">mdi-notebook</v-icon>
